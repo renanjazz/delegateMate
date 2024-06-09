@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import About from "./pages/About";
 import CompanyPage from "./pages/CompanyPage";
@@ -13,15 +13,15 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/companies" component={CompanyList} />
-        <Route path="/requests" component={RequestList} />
-        <Route path="/personal-details" component={PersonalDetails} />
+        <Route path="/companies" component={CompanyPage} />
+        <Route path="/requests" component={RequestPage} />
+        <Route path="/personal-details" component={PersonalDetailsPage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   );
 }
-export default App;
 
-// jonny wuz here
-// renan wuz also here
-//guilherme wuz here as well
+export default App;
