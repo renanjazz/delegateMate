@@ -12,15 +12,14 @@ function App() {
   return (
     <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/companies" component={CompanyPage} />
-        <Route path="/requests" component={RequestReceivedPage} />
-        <Route path="/open-request" component={OpenRequestPage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/about" component={About} />
-        <Route path="*" component={NotFound} />
+        <Route path="/companies" element={<CompanyPage/>} />
+        <Route path="/requests" element={<RequestReceivedPage/>} />
+        <Route path="/open-request" element={<OpenRequestPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="*" element={<NotFound/>} />
     </Routes>
   );
 } 
 
 export default App;
-
