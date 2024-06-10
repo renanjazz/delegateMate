@@ -43,7 +43,7 @@ const HomePage = () => {
               <option className="dropdown-content" value="Berlin">Berlin</option>
             </select>
           </label> 
-          <button>Submit</button>
+          <button className="proceed-button">Let's go!</button>
         </form>
       </div>
     </>

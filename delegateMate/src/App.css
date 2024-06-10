@@ -54,7 +54,7 @@ h1{
   color: black;
   font-weight: 400;
   font-size: 1rem;
-  padding-top: 30vh;
+  padding-top: 15vh;
   text-align:center;
   align-items: center;
   padding-left: 10vw;
@@ -81,5 +81,35 @@ h1{
   background-color:#BFC5FF;
   width: 200px;
   height: 25px;
-  border-
+}
+
+button.btn.btn-default {
+  background: #e0e0e0;
+  box-shadow: none;
+}
+
+.proceed-button{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: bold;
+  background-color: #BFC5FF;
+  font-size: 1.30rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: 90%;
+  height: 80px;
+}
+
+.proceed-button:hover{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  font-size: 1.30rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: 90%;
+  height: 80px;
 }

@@ -8,7 +8,7 @@ const NavBar = () => {
       <img
       src={logo}
       alt='logo'
-      style={{height: "60px"}}
+      style={{height: "50px"}}
       className='logo'
       />
       <Link to="/">
