@@ -8,25 +8,27 @@ import NotFound from "./pages/NotFound";
 import OpenRequestPage from "./pages/OpenRequestPage";
 import RequestReceivedPage from "./pages/RequestReceivedPage";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Terms from "./pages/Terms";
+
 
 function App() {
   return (
-    <>
+    <div>
       <NavBar />
-       <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/companies" component={CompanyPage} />
-          <Route path="/requests" component={RequestReceivedPage} />
-          <Route path="/open-request" component={OpenRequestPage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/about" component={About} />
-          <Route path="/terms" component={Terms} />
-          <Route path="*" component={NotFound} />
-        </Routes>
-    </>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/companies" element={<CompanyPage />} />
+        <Route path="/requests" element={<RequestReceivedPage />} />
+        <Route path="/open-request" element={<OpenRequestPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </div>
   );
-} 
+}
 
 export default App;
-
