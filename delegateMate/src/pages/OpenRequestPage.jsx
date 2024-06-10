@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RequestPage = () => {
+const OpenRequestPage = () => {
   return (
     <div>
       
@@ -8,5 +8,5 @@ const RequestPage = () => {
   )
 }
 
-export default RequestPage
+export default OpenRequestPage
 

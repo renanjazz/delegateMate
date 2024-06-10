@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PersonalDetailsPage = () => {
+const RequestReceivedPage = () => {
   return (
     <div>
       
@@ -8,4 +8,5 @@ const PersonalDetailsPage = () => {
   )
 }
 
-export default PersonalDetailsPage
+export default RequestReceivedPage
+
