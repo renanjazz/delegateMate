@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div>
-      <h2>HomePage</h2>
+      <h1>delegateMate</h1>
       <Link to="/login">Login</Link>
     </div>
   );

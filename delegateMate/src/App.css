@@ -2,6 +2,16 @@
   background-color: #BFC5FF;
 }
 
+h1{
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: bold;
+  font-size: xx-large;
+  align-items: center;
+
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
