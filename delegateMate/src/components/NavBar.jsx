@@ -1,7 +1,20 @@
 import React from "react";
 
 const NavBar = () => {
-  return <div></div>;
+  return (
+    <nav className="navbar">
+      <img src={logo} alt="logo" style={{ height: "60px" }} className="logo" />
+      <Link to="/">
+        <button className="navbar-button">About</button>
+      </Link>
+      <Link to="/terms">
+        <button className="navbar-button">Terms</button>
+      </Link>
+      <Link to="/open-request">
+        <button className="navbar-button">Account</button>
+      </Link>
+    </nav>
+  );
 };
 
 export default NavBar;
