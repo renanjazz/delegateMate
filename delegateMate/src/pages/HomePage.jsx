@@ -25,13 +25,25 @@ const HomePage = () => {
           delegateMate will handle your most boring and time consuming calls, in a wide range of languages.
          Simply make a request, and we'll do the rest.
         </h4>
-        <form onSubmit={handleLetsGo}>
-          <label>
+        <form onSubmit={handleLetsGo} className="homepage-form">
+          <label className="option-label">
             Service:
-            <select
-                
-            />
-            </label> 
+            <select className="dropdown-box">
+             <option className="dropdown-content" value="--">--</option>
+              <option className="dropdown-content" value="Plumbing">Plumbing</option>
+              <option className="dropdown-content" value="Telephone Provider">Telephone Provider</option>
+              <option className="dropdown-content" value="Electrician">Electrician</option>
+            </select>
+          </label> 
+          <label className="option-label">
+            City:
+            <select className="dropdown-box">
+             <option className="dropdown-content" value="--">--</option>
+              <option className="dropdown-content" value="Lisbon">Lisbon</option>
+              <option className="dropdown-content" value="Berlin">Berlin</option>
+            </select>
+          </label> 
+          <button>Submit</button>
         </form>
       </div>
     </>

@@ -54,9 +54,32 @@ h1{
   color: black;
   font-weight: 400;
   font-size: 1rem;
-  padding-top: 40vh;
+  padding-top: 30vh;
   text-align:center;
   align-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
+}
+
+.homepage-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.option-label {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  text-align:center;
+  align-items: center;
+}
+
+.dropdown-box{
+  background-color:#BFC5FF;
+  width: 200px;
+  height: 25px;
+  border-
 }
