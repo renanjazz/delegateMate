@@ -53,7 +53,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-
-
-
-//       <Link to="/login">Login</Link>
