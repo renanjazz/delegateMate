@@ -10,18 +10,22 @@ import RequestReceivedPage from "./pages/RequestReceivedPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Terms from "./pages/Terms";
+import CreateRequestPage from "./pages/CreateRequestPage";
+import { useState } from "react";
 
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
   return (
     <div>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/companies" element={<CompanyPage />} />
-        <Route path="/requests" element={<RequestReceivedPage />} />
-        <Route path="/open-request" element={<OpenRequestPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/create-request" element={<CreateRequestPage />} />
+        <Route path="/login" element={<LoginPage setCurrentUser={setCurrentUser} />} />
+        <Route path="/request-received" element={<RequestReceivedPage />} />
+        <Route path="/open-requests" element={<OpenRequestPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
