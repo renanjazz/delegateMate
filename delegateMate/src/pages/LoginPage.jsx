@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const LoginPage = () => {
   // TO-DO - fake login
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   //
   const [name, setName] = useState("");
   const [surName, setSurname] = useState("");
@@ -15,6 +15,14 @@ const LoginPage = () => {
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
 
+  function handleLogin(event) {
+    event.preventDefault();
+    const existingLogin = {
+      username,
+      password,
+    };
+    console.log("user is logging in", existingLogin);
+  }
   function handleAddLogin(event) {
     event.preventDefault();
     const newLogin = {
@@ -33,6 +41,32 @@ const LoginPage = () => {
   return (
     <>
       <div>
+        <h1>Login</h1>
+        <form onSubmit={handleLogin}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(event) => {
+                setUsername(event.target.value);
+              }}
+              placeholder="Username"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
+              placeholder="Password"
+            />
+            <button className="enter-button">Enter</button>
+          </label>
+        </form>
         <h2>Don't have an account yet?</h2>
         <form onSubmit={handleAddLogin}>
           <label>
@@ -71,7 +105,7 @@ const LoginPage = () => {
           <label>
             Password:
             <input
-              type=""
+              type="password"
               value={createPassword}
               onChange={(event) => {
                 setCreatePassword(event.target.value);
@@ -134,8 +168,10 @@ const LoginPage = () => {
               placeholder="Postcode"
             />
           </label>
-          <button>Back</button>
-          <button>Submit</button>
+          <Link to="/open-request">
+            <button className="back-button">Back</button>
+          </Link>
+          <button className="submit-button">Submit</button>
         </form>
       </div>
     </>
