@@ -1,10 +1,11 @@
+import { API_URL } from "../config";
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-const LoginPage = (setCurrentUser) => {
-  // TO-DO - fake login
+const LoginPage = ({ setCurrentUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
   //
   const [name, setName] = useState("");
   const [surName, setSurname] = useState("");
@@ -17,18 +18,39 @@ const LoginPage = (setCurrentUser) => {
   const [postcode, setPostcode] = useState("");
   const nav = useNavigate();
 
-  function handleLogin(event) {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    const existingLogin = {
-      username,
-      password,
-    };
-    console.log("user is logging in", existingLogin);
-  }
+    try {
+      const { data } = await axios.get(`${API_URL}/users`, {
+        username,
+        password,
+      });
+      const foundUser = data.find((oneUser) => {
+        if (oneUser.username.toLowerCase() === username.toLowerCase()) {
+          return true;
+        }
+      });
+      console.log("Found user!", foundUser);
+      if (!foundUser) {
+        setError("Invalid credentials");
+      } else {
+        const passCheck = foundUser.password === password;
+        console.log("does the password match", passCheck);
+        if (passCheck) {
+          setCurrentUser(foundUser);
+          nav("/request-received");
+        } else {
+          setError("Something went wrong, please try again.");
+        }
+      }
+    } catch (error) {
+      console.log("Something is not quite right");
+    }
+  };
   const handleAddLogin = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5005/users", {
+      const { data } = await axios.post(`${API_URL}/users`, {
         name,
         surName,
         createUsername,
@@ -41,9 +63,9 @@ const LoginPage = (setCurrentUser) => {
       });
       console.log("User created", data);
       setCurrentUser(data);
-      nav("/requests");
+      nav("/request-received");
     } catch (error) {
-      console.log(error);
+      console.log("Something went wrong");
     }
   };
   return (
@@ -72,9 +94,14 @@ const LoginPage = (setCurrentUser) => {
               }}
               placeholder="Password"
             />
+            {/* <Link to="/request-received"> */}
             <button className="enter-button">Enter</button>
+            {/* </Link> */}
           </label>
         </form>
+        {error && (
+          <p style={{ color: "red" }}>Invalid credentials, please try again</p>
+        )}
         <h2>Don't have an account yet?</h2>
         <form onSubmit={handleAddLogin}>
           <label>

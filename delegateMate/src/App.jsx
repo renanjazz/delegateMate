@@ -24,8 +24,8 @@ function App() {
         <Route path="/companies" element={<CompanyPage />} />
         <Route path="/create-request" element={<CreateRequestPage />} />
         <Route path="/login" element={<LoginPage setCurrentUser={setCurrentUser} />} />
-        <Route path="/request-received" element={<RequestReceivedPage />} />
-        <Route path="/open-requests" element={<OpenRequestPage />} />
+        <Route path="/request-received" element={<RequestReceivedPage currentUser={currentUser}/>} />
+        <Route path="/open-requests" element={<OpenRequestPage currentUser={currentUser}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
