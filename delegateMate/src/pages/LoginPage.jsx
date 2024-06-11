@@ -1,6 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-const LoginPage = () => {
+import { Link, useNavigate } from "react-router-dom";
+const LoginPage = (setCurrentUser) => {
   // TO-DO - fake login
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +15,7 @@ const LoginPage = () => {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
+  const nav = useNavigate();
 
   function handleLogin(event) {
     event.preventDefault();
@@ -23,21 +25,27 @@ const LoginPage = () => {
     };
     console.log("user is logging in", existingLogin);
   }
-  function handleAddLogin(event) {
+  const handleAddLogin = async (event) => {
     event.preventDefault();
-    const newLogin = {
-      name,
-      surName,
-      createUsername,
-      createPassword,
-      email,
-      telephone,
-      address,
-      city,
-      postcode,
-    };
-    console.log("new login added", newLogin);
-  }
+    try {
+      const { data } = await axios.post("http://localhost:5005/users", {
+        name,
+        surName,
+        createUsername,
+        createPassword,
+        email,
+        telephone,
+        address,
+        city,
+        postcode,
+      });
+      console.log("User created", data);
+      setCurrentUser(data);
+      nav("/requests");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div>
