@@ -9,6 +9,8 @@ import OpenRequestPage from "./pages/OpenRequestPage";
 import RequestReceivedPage from "./pages/RequestReceivedPage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Terms from "./pages/Terms";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/open-request" element={<OpenRequestPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
