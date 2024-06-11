@@ -49,6 +49,24 @@ h1{
   text-align: center;
 }
 
+h2{
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+p{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
 .homepage-text {
   font-family: "neue-haas-grotesk-display", sans-serif;
   color: black;
@@ -107,13 +125,14 @@ button.btn.btn-default {
   color: black;
   font-weight: bold;
   background-color: #BFC5FF;
-  font-size: 1.30rem;
+  font-size: 1.20rem;
   border-color: white;
   border: 3px solid black;
   width: 120px;
   border-radius: 90%;
   height: 80px;
   cursor: pointer;
+  margin: 10px;
 
 }
 
@@ -122,11 +141,17 @@ button.btn.btn-default {
   color: white;
   font-weight: bold;
   background-color: black;
-  font-size: 1.30rem;
+  font-size: 1.20rem;
   border-color: white;
   border: 3px solid black;
   width: 120px;
   border-radius: 90%;
   height: 80px;
   cursor: pointer;
+}
+
+.request-received-buttons{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
