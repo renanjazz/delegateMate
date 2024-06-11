@@ -21,8 +21,8 @@ const HomePage = () => {
       <div>
         <h1>delegateMate</h1>
         <h4 className="homepage-text">
-          Need to fix your plumbing, subscribe to a WIFI plan or contact any other service provider? We're here to help! 
-          delegateMate will handle your most boring and time consuming calls, in a wide range of languages.
+          Need to fix your plumbing, subscribe to a WIFI plan or contact any other service provider? delegateMate is here to help! 
+          We will handle your most boring and time consuming calls, in a wide range of languages.
          Simply make a request, and we'll do the rest.
         </h4>
         <form onSubmit={handleLetsGo} className="homepage-form">
