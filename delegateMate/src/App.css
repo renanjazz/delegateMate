@@ -1,5 +1,5 @@
 :root {
-  background-color: #BFC5FF;
+  background-color: #bfc5ff;
 }
 
 .navbar {
@@ -15,23 +15,23 @@
   padding-top: 5px;
 }
 
-.navbar-button{
+.navbar-button {
   color: black;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
-  background-color: #BFC5FF;
-  border: #BFC5FF;
+  background-color: #bfc5ff;
+  border: #bfc5ff;
   cursor: pointer;
 }
 
-.navbar-button:hover{
+.navbar-button:hover {
   color: black;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
-  background-color: #BFC5FF;
-  border: #BFC5FF;
+  background-color: #bfc5ff;
+  border: #bfc5ff;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -40,7 +40,7 @@
   padding-right: 1000px;
 }
 
-h1{
+h1 {
   font-family: "neue-haas-grotesk-display", sans-serif;
   color: black;
   font-weight: 400;
@@ -49,7 +49,7 @@ h1{
   text-align: center;
 }
 
-h2{
+h2 {
   font-family: "neue-haas-grotesk-display", sans-serif;
   color: black;
   font-weight: 400;
@@ -58,7 +58,7 @@ h2{
   text-align: center;
 }
 
-h4{
+h4 {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 700;
@@ -67,7 +67,7 @@ h4{
   text-align: center;
 }
 
-p{
+p {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 400;
@@ -75,10 +75,9 @@ p{
   font-size: 1rem;
   text-align: center;
   margin-top: -5px;
-
 }
 
-ul{
+ul {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 400;
@@ -94,7 +93,7 @@ ul{
   font-weight: 400;
   font-style: bold;
   font-size: 2rem;
-  text-align:center;
+  text-align: center;
   align-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
@@ -106,13 +105,13 @@ ul{
   font-weight: 400;
   font-size: 1rem;
   padding-top: 15vh;
-  text-align:center;
+  text-align: center;
   align-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
 }
 
-.homepage-form{
+.homepage-form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -124,16 +123,15 @@ ul{
   font-family: "neue-haas-grotesk-display", sans-serif;
   color: black;
   font-size: 1.5rem;
-  text-align:center;
+  text-align: center;
   align-items: center;
 }
 
-.dropdown-box{
-  background-color:#BFC5FF;
+.dropdown-box {
+  background-color: #bfc5ff;
   width: 200px;
   height: 25px;
   cursor: pointer;
-
 }
 
 button.btn.btn-default {
@@ -141,12 +139,12 @@ button.btn.btn-default {
   box-shadow: none;
 }
 
-.proceed-button{
+.proceed-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: bold;
-  background-color: #BFC5FF;
-  font-size: 1.20rem;
+  background-color: #bfc5ff;
+  font-size: 1.2rem;
   border-color: white;
   border: 3px solid black;
   width: 120px;
@@ -154,15 +152,14 @@ button.btn.btn-default {
   height: 80px;
   cursor: pointer;
   margin: 10px;
-
 }
 
-.proceed-button:hover{
+.proceed-button:hover {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: white;
   font-weight: bold;
   background-color: black;
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   border-color: white;
   border: 3px solid black;
   width: 120px;
@@ -171,19 +168,19 @@ button.btn.btn-default {
   cursor: pointer;
 }
 
-.request-received-buttons{
+.request-received-buttons {
   display: flex;
   justify-content: center;
   padding: 30px;
 }
 
-.your-request-greater-container{
+.your-request-greater-container {
   display: flex;
   justify-content: center;
   margin-top: -30px;
 }
 
-.your-request-container{
+.your-request-container {
   display: flex;
   align-items: flex-start;
   width: 40vw;
@@ -194,10 +191,120 @@ button.btn.btn-default {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:center;
-  background-color: #BFC5FF;
+  text-align: center;
+  background-color: #bfc5ff;
   border: 3px solid black;
   height: 30px;
   width: 40vw;
   margin-bottom: 20px;
+}
+
+.forms-address {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  border: 3px solid black;
+  height: 35px;
+  width: 41vw;
+  margin-bottom: 20px;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.forms-login {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  border: 3px solid black;
+  height: 35px;
+  width: 20vw;
+  margin-bottom: 20px;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.enter-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #346eff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.enter-button:hover {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(95, 184, 239);
+  border-color: white;
+  text-align: center;
+}
+
+.enter-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-and-enter {
+  display: flex;
+  flex-direction: column;
+}
+.account-details-row {
+  display: flex;
+  justify-content: center;
+}
+
+.label-login {
+  margin: 5px;
+}
+
+.submit-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #346eff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(95, 184, 239);
+  border-color: white;
+  text-align: center;
+}
+
+.back-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  margin-top: 20px;
+  padding: 10px 30px;
+  color: rgb(0, 0, 0);
+  background-color: #afafaf;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
 }
