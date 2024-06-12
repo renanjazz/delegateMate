@@ -13,9 +13,9 @@ import Terms from "./pages/Terms";
 import CreateRequestPage from "./pages/CreateRequestPage";
 import { useState } from "react";
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+
   return (
     <div>
       <NavBar />

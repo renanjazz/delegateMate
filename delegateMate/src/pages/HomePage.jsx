@@ -1,55 +1,42 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {useState} from "react";
-
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [service, setService] = useState("");
   const [city, setCity] = useState("");
+  const navigate = useNavigate();
 
-  function handleLetsGo(event) {
-    event.preventDefault();
-    const newRequest = {
-      service,
-      city
-    };
-    console.log("new request", newRequest)
-  }
+  const handleProceed = () => {
+    if (service && city) {
+      navigate(`/companies?service=${service}&city=${city}`);
+    } else {
+      alert("Please let us know where, and how to help");
+    }
+  };
 
   return (
-    <> 
-      <div>
-        <h1>delegateMate</h1>
-        <h4 className="homepage-text">
-          Need to fix your plumbing, subscribe to a WIFI plan or contact any other service provider? delegateMate is here to help! 
-          We will handle your most boring and time consuming calls, in a wide range of languages.
-         Simply make a request, and we'll do the rest.
-        </h4>
-        <form onSubmit={handleLetsGo} className="homepage-form">
-          <label className="option-label">
-            Service:
-            <select className="dropdown-box">
-             <option className="dropdown-content" value="--">--</option>
-              <option className="dropdown-content" value="Plumbing">Plumbing</option>
-              <option className="dropdown-content" value="Telephone Provider">Telephone Provider</option>
-              <option className="dropdown-content" value="Electrician">Electrician</option>
-            </select>
-          </label> 
-          <label className="option-label">
-            City:
-            <select className="dropdown-box">
-             <option className="dropdown-content" value="--">--</option>
-              <option className="dropdown-content" value="Lisbon">Lisbon</option>
-              <option className="dropdown-content" value="Berlin">Berlin</option>
-            </select>
-          </label> 
-          <button className="proceed-button">Let's go!</button>
-          <Link to="/login">Login</Link>
-        </form>
+    <div className="home-page">
+      <h1>Welcome to Our Service</h1>
+      <p>Select a service and a city to find the best companies for your needs.</p>
+
+      <div className="dropdown-container">
+        <select value={service} onChange={(e) => setService(e.target.value)} className="dropdown">
+          <option value="">Select Service</option>
+          <option value="Plumbing">Plumbing</option>
+          <option value="Electrician">Electrician</option>
+          <option value="Telephone Provider">Telephone Provider</option>
+        </select>
+
+        <select value={city} onChange={(e) => setCity(e.target.value)} className="dropdown">
+          <option value="">Select City</option>
+          <option value="Lisbon">Lisbon</option>
+          <option value="Berlin">Berlin</option>
+        </select>
       </div>
-    </>
+
+      <button className="proceed-button" onClick={handleProceed}>Let's go!</button>
+    </div>
   );
 };
 
 export default HomePage;
-

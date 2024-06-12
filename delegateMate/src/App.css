@@ -2,42 +2,37 @@
   background-color: #BFC5FF;
 }
 
+body {
+  margin: 0;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  background-color: #BFC5FF;
+  color: black;
+}
+
 .navbar {
   display: flex;
-  flex-direction: row;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  color: black;
-  font-weight: 400;
-  font-style: normal;
-  font-size: medium;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 5px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-button{
-  color: black;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 400;
+.navbar-button {
+  background: none;
+  border: none;
   font-size: 1.5rem;
-  background-color: #BFC5FF;
-  border: #BFC5FF;
   cursor: pointer;
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
-.navbar-button:hover{
-  color: black;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  background-color: #BFC5FF;
-  border: #BFC5FF;
-  cursor: pointer;
+.navbar-button:hover {
+  color: #000;
   text-decoration: underline;
 }
 
 .logo {
-  padding-right: 1000px;
+  height: 50px;
 }
 
 h1{
@@ -46,6 +41,7 @@ h1{
   font-weight: 400;
   font-style: bold;
   font-size: 4rem;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -112,39 +108,27 @@ ul{
   padding-right: 10vw;
 }
 
-.homepage-form{
+.homepage-form {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  height: 200px;
-  justify-content: space-between;
-}
-
-.option-label {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  color: black;
-  font-size: 1.5rem;
-  text-align:center;
   align-items: center;
+  justify-content: space-between;
+  height: 200px;
 }
 
-.dropdown-box{
-  background-color:#BFC5FF;
-  width: 200px;
-  height: 25px;
+.dropdown {
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   cursor: pointer;
-
 }
 
-button.btn.btn-default {
-  background: #e0e0e0;
-  box-shadow: none;
-}
-
-.proceed-button{
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  color: black;
+.proceed-button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
   font-weight: bold;
+  border: 2px solid black;
+  border-radius: 50px;
   background-color: #BFC5FF;
   font-size: 1.20rem;
   border-color: white;
@@ -154,13 +138,42 @@ button.btn.btn-default {
   height: 80px;
   cursor: pointer;
   margin: 10px;
-
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.proceed-button:hover{
-  font-family: "neue-haas-grotesk-text", sans-serif;
+.proceed-button:hover {
+  background-color: black;
   color: white;
+}
+
+.company-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.company-title {
   font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.company-description {
+  color: #555;
+}
+
+.company-card:hover {
+  transform: scale(1.05);
+}
+
+.companies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: black;
   font-size: 1.20rem;
   border-color: white;
@@ -170,7 +183,6 @@ button.btn.btn-default {
   height: 80px;
   cursor: pointer;
 }
-
 .request-received-buttons{
   display: flex;
   justify-content: center;
