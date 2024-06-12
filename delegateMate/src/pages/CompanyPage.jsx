@@ -7,6 +7,11 @@ const CompanyPage = () => {
   const queryParams = new URLSearchParams(location.search);
   const service = queryParams.get("service");
   const city = queryParams.get("city");
+
+
+
+
+  // I think this state stores the list of companies and the selected one
   const [companies, setCompanies] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const navigate = useNavigate();
@@ -29,6 +34,11 @@ const CompanyPage = () => {
 
   const handleProceed = () => {
     if (selectedCompany) {
+
+
+      //I think this stores the selected company in localStorage and navigate to the next page
+
+      localStorage.setItem('selectedCompany', JSON.stringify(selectedCompany));
       navigate("/next-page", { state: { selectedCompany } });
     } else {
       alert("Please select a company to proceed.");
@@ -37,10 +47,14 @@ const CompanyPage = () => {
 
   return (
     <div className="company-page">
-      <h1>Companies in {city} for {service}</h1>
+      <h2>Companies in {city} for {service}</h2>
       <div className="companies-list">
         {companies.map(company => (
-          <div key={company.id} className={`company-card ${selectedCompany === company ? 'selected' : ''}`} onClick={() => handleSelectCompany(company)}>
+          <div 
+            key={company.id} 
+            className={`company-card ${selectedCompany && selectedCompany.id === company.id ? 'selected' : ''}`} 
+            onClick={() => handleSelectCompany(company)}
+          >
             <h2 className="company-title">{company.title}</h2>
             <p className="company-description">{company.description}</p>
           </div>
