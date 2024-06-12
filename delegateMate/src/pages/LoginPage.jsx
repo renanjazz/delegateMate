@@ -1,9 +1,11 @@
+import { API_URL } from "../config";
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-const LoginPage = () => {
-  // TO-DO - fake login
+import { Link, useNavigate } from "react-router-dom";
+const LoginPage = ({ setCurrentUser }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
   //
   const [name, setName] = useState("");
   const [surName, setSurname] = useState("");
@@ -14,30 +16,56 @@ const LoginPage = () => {
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
+  const nav = useNavigate();
 
-  function handleLogin(event) {
+  const handleLogin = async (event) => {
     event.preventDefault();
-    const existingLogin = {
-      username,
-      password,
-    };
-    console.log("user is logging in", existingLogin);
-  }
-  function handleAddLogin(event) {
+    try {
+      const { data } = await axios.get(`${API_URL}/users`);
+      console.log("This is the data", data);
+      const foundUser = data.find((oneUser) => {
+        if (oneUser.username.toLowerCase() === username.toLowerCase()) {
+          return true;
+        }
+      });
+      console.log("Found user!", foundUser);
+      if (!foundUser) {
+        setError("Invalid credentials");
+      } else {
+        const passCheck = foundUser.password === password;
+        console.log("does the password match", passCheck);
+        if (passCheck) {
+          setCurrentUser(foundUser);
+          nav("/request-received");
+        } else {
+          setError("Something went wrong, please try again.");
+        }
+      }
+    } catch (error) {
+      console.log("Something is not quite right", error);
+    }
+  };
+  const handleAddLogin = async (event) => {
     event.preventDefault();
-    const newLogin = {
-      name,
-      surName,
-      createUsername,
-      createPassword,
-      email,
-      telephone,
-      address,
-      city,
-      postcode,
-    };
-    console.log("new login added", newLogin);
-  }
+    try {
+      const { data } = await axios.post(`${API_URL}/users`, {
+        name,
+        surName,
+        username: createUsername,
+        password: createPassword,
+        email,
+        telephone,
+        address,
+        city,
+        postcode,
+      });
+      console.log("User created", data);
+      setCurrentUser(data);
+      nav("/request-received");
+    } catch (error) {
+      console.log("Something went wrong");
+    }
+  };
   return (
     <>
       <div>
@@ -64,9 +92,14 @@ const LoginPage = () => {
               }}
               placeholder="Password"
             />
+            {/* <Link to="/request-received"> */}
             <button className="enter-button">Enter</button>
+            {/* </Link> */}
           </label>
         </form>
+        {error && (
+          <p style={{ color: "red" }}>Invalid credentials, please try again</p>
+        )}
         <h2>Don't have an account yet?</h2>
         <form onSubmit={handleAddLogin}>
           <label>
