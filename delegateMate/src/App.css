@@ -141,6 +141,7 @@ button.btn.btn-default {
   box-shadow: none;
 }
 
+/*
 .proceed-button{
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
@@ -170,6 +171,38 @@ button.btn.btn-default {
   height: 80px;
   cursor: pointer;
 }
+*/
+
+.proceed-button{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: bold;
+  background-color: #BFC5FF;
+  font-size: 1rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: 10px;
+  height: 40px;
+  cursor: pointer;
+  margin: 10px;
+
+}
+
+.proceed-button:hover{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  font-size: 1rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: px;
+  height: 40px;
+  cursor: pointer;
+}
+
 
 .request-received-buttons{
   display: flex;
@@ -194,10 +227,82 @@ button.btn.btn-default {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:center;
+  text-align:left;
   background-color: #BFC5FF;
   border: 3px solid black;
   height: 30px;
-  width: 40vw;
+  width: 39.6vw;
   margin-bottom: 20px;
+  border-radius: 10px;
+  padding-left: 8px;
+
 }
+
+.standard-delivery-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align:left;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+  height: 40px;
+  width: 40.6vw;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-left: 8px;
+}
+
+.standard-delivery-button.selected {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align:left;
+  background-color: white;
+  height: 40px;
+  width: 40.6vw;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-left: 8px;
+
+}
+
+.expedited-delivery-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align:left;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+  height: 40px;
+  width: 40.6vw;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-left: 8px;
+
+}
+
+.expedited-delivery-button.selected {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align:left;
+  background-color: white;
+  height: 40px;
+  width: 40.6vw;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-left: 8px;
+
+}
+
+.back-next-container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+

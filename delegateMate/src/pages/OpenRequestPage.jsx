@@ -3,7 +3,7 @@ import React from 'react';
 function OpenRequestPage({ userData, currentUser }) {
   return (
     <div>
-      <h1>Open Request Page</h1>
+      <h1>Open requests</h1>
       {userData ? (
         <div>
           <h2>User Information:</h2>
