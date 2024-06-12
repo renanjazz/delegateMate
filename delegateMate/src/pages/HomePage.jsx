@@ -44,6 +44,7 @@ const HomePage = () => {
             </select>
           </label> 
           <button className="proceed-button">Let's go!</button>
+          <Link to="/login">Login</Link>
         </form>
       </div>
     </>
@@ -52,7 +53,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-
-
-
-//       <Link to="/login">Login</Link>
