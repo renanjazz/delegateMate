@@ -21,10 +21,8 @@ const LoginPage = ({ setCurrentUser }) => {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await axios.get(`${API_URL}/users`, {
-        username,
-        password,
-      });
+      const { data } = await axios.get(`${API_URL}/users`);
+      console.log("This is the data", data);
       const foundUser = data.find((oneUser) => {
         if (oneUser.username.toLowerCase() === username.toLowerCase()) {
           return true;
@@ -44,7 +42,7 @@ const LoginPage = ({ setCurrentUser }) => {
         }
       }
     } catch (error) {
-      console.log("Something is not quite right");
+      console.log("Something is not quite right", error);
     }
   };
   const handleAddLogin = async (event) => {
@@ -53,8 +51,8 @@ const LoginPage = ({ setCurrentUser }) => {
       const { data } = await axios.post(`${API_URL}/users`, {
         name,
         surName,
-        createUsername,
-        createPassword,
+        username: createUsername,
+        password: createPassword,
         email,
         telephone,
         address,
