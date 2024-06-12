@@ -33,8 +33,12 @@ const CreateRequestPage = () => {
             </div>
             </div>
             <div className='back-next-container'>
+                <Link to="/login">
                 <button className='proceed-button'>Back</button>
+                </Link>
+                <Link to="/companies">
                 <button className='proceed-button'>Next</button>
+                </Link>
             </div>
         
         </div>

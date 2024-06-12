@@ -180,7 +180,7 @@ button.btn.btn-default {
   background-color: #BFC5FF;
   font-size: 1rem;
   border-color: white;
-  border: 3px solid black;
+  border: 2px solid black;
   width: 120px;
   border-radius: 10px;
   height: 40px;
@@ -196,7 +196,7 @@ button.btn.btn-default {
   background-color: black;
   font-size: 1rem;
   border-color: white;
-  border: 3px solid black;
+  border: 2px solid black;
   width: 120px;
   border-radius: px;
   height: 40px;
@@ -228,8 +228,8 @@ button.btn.btn-default {
   color: black;
   font-size: 1rem;
   text-align:left;
-  background-color: #BFC5FF;
-  border: 3px solid black;
+  background-color: #ffffff;
+  border: 2px solid black;
   height: 30px;
   width: 39.6vw;
   margin-bottom: 20px;
