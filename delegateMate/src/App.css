@@ -58,6 +58,15 @@ h2{
   text-align: center;
 }
 
+h4{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
 p{
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
@@ -65,6 +74,18 @@ p{
   font-style: bold;
   font-size: 1rem;
   text-align: center;
+  margin-top: -5px;
+
+}
+
+ul{
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 1rem;
+  text-align: left;
+  margin-top: -5px;
 }
 
 .homepage-text {
@@ -154,4 +175,29 @@ button.btn.btn-default {
   display: flex;
   justify-content: center;
   padding: 30px;
+}
+
+.your-request-greater-container{
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+
+.your-request-container{
+  display: flex;
+  align-items: flex-start;
+  width: 40vw;
+  flex-direction: column;
+}
+
+.problem-input {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align:center;
+  background-color: #BFC5FF;
+  border: 3px solid black;
+  height: 30px;
+  width: 40vw;
+  margin-bottom: 20px;
 }
