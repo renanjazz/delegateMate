@@ -14,9 +14,10 @@ import CreateRequestPage from "./pages/CreateRequestPage";
 import { useState } from "react";
 import UpdatePage from "./pages/UpdatePage";
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+
+
   return (
     <div>
       <NavBar />
@@ -25,6 +26,8 @@ function App() {
         <Route path="/companies" element={<CompanyPage />} />
         <Route path="/create-request" element={<CreateRequestPage />} />
         <Route path="/login" element={<LoginPage setCurrentUser={setCurrentUser} />} />
+        <Route path="/request-received" element={<RequestReceivedPage />} />
+        <Route path="/open-requests" element={<OpenRequestPage userData={currentUser} />} />
         <Route path="/request-received" element={<RequestReceivedPage currentUser={currentUser}/>} />
         <Route path="/open-requests" element={<OpenRequestPage currentUser={currentUser}/>} />
         <Route path="/update-delivery" element={<UpdatePage currentUser={currentUser}/>} />
