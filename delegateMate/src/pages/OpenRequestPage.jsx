@@ -1,9 +1,11 @@
 import React from 'react';
+import RequestCard from '../components/RequestCard';
 
 function OpenRequestPage({ userData, currentUser }) {
   return (
     <div>
-      <h1>Open Request Page</h1>
+      <h1>Open requests</h1>
+      <RequestCard/>
       {userData ? (
         <div>
           <h2>User Information:</h2>
@@ -11,9 +13,10 @@ function OpenRequestPage({ userData, currentUser }) {
           <p>Email: {userData.email}</p>
         </div>
       ) : (
-        <p>Loading user data...</p>
+        <p></p>
       )}
     </div>
+    
   );
 }
 

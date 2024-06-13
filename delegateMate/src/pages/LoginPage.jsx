@@ -75,6 +75,7 @@ const LoginPage = ({ setCurrentUser }) => {
   return (
     <>
       <div>
+<<<<<<< HEAD
         <h1>Login</h1>
         {selectedCompany && (
           <div>
@@ -103,10 +104,40 @@ const LoginPage = ({ setCurrentUser }) => {
             />
             <button className="enter-button">Enter</button>
           </label>
+=======
+        <h2>Login</h2>
+        <form className="login-form-and-enter">
+          <div className="account-details-row">
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={username}
+                onChange={(event) => {
+                  setUsername(event.target.value);
+                }}
+                placeholder="Username"
+              />
+            </label>
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="password"
+                value={password}
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                }}
+                placeholder="Password"
+              />
+            </label>
+          </div>
+>>>>>>> 43f91c2f4d45e8d72d73f109afd2a42a198af21b
         </form>
+
         {error && (
           <p style={{ color: "red" }}>Invalid credentials, please try again</p>
         )}
+<<<<<<< HEAD
         <h2>Don't have an account yet?</h2>
         <form onSubmit={handleAddLogin}>
           <label>
@@ -165,13 +196,98 @@ const LoginPage = ({ setCurrentUser }) => {
           </label>
           <label>
             Address:
+=======
+        <div className="enter-button-container">
+          <button onClick={handleLogin} className="proceed-button">
+            Enter
+          </button>
+        </div>
+        <h4>Don't have an account yet?</h4>
+        <form className="login-form" onSubmit={handleAddLogin}>
+          <div className="account-details-row">
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={name}
+                onChange={(event) => {
+                  setName(event.target.value);
+                }}
+                placeholder="Name"
+              />
+            </label>
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={surName}
+                onChange={(event) => {
+                  setSurname(event.target.value);
+                }}
+                placeholder="Surname"
+              />
+            </label>
+          </div>
+          <div className="account-details-row">
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={createUsername}
+                onChange={(event) => {
+                  setCreateUsername(event.target.value);
+                }}
+                placeholder="Username"
+              />
+            </label>
+
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="password"
+                value={createPassword}
+                onChange={(event) => {
+                  setCreatePassword(event.target.value);
+                }}
+                placeholder="Password"
+              />
+            </label>
+          </div>
+          <div className="account-details-row">
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
+                placeholder="Email"
+              />
+            </label>
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={telephone}
+                onChange={(event) => {
+                  setTelephone(event.target.value);
+                }}
+                placeholder="Telephone"
+              />
+            </label>
+          </div>
+          <label className="label-login">
+>>>>>>> 43f91c2f4d45e8d72d73f109afd2a42a198af21b
             <input
+              className="forms-address"
               type="text"
               value={address}
               onChange={(event) => setAddress(event.target.value)}
               placeholder="Address"
             />
           </label>
+<<<<<<< HEAD
           <label>
             City:
             <input
@@ -194,6 +310,39 @@ const LoginPage = ({ setCurrentUser }) => {
             <button className="back-button">Back</button>
           </Link>
           <button className="submit-button">Submit</button>
+=======
+          <div className="account-details-row">
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="text"
+                value={city}
+                onChange={(event) => {
+                  setCity(event.target.value);
+                }}
+                placeholder="City"
+              />
+            </label>
+            <label className="label-login">
+              <input
+                className="forms-login"
+                type="postcode"
+                value={postcode}
+                onChange={(event) => {
+                  setPostcode(event.target.value);
+                }}
+                placeholder="Postcode"
+              />
+            </label>
+          </div>
+          <div>
+            <Link to="/open-request">
+              <button className="proceed-button">Back</button>
+            </Link>
+
+            <button className="proceed-button">Submit</button>
+          </div>
+>>>>>>> 43f91c2f4d45e8d72d73f109afd2a42a198af21b
         </form>
       </div>
     </>
