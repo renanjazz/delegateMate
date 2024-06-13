@@ -150,38 +150,6 @@ button.btn.btn-default {
   box-shadow: none;
 }
 
-/*
-.proceed-button{
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  color: black;
-  font-weight: bold;
-  background-color: #BFC5FF;
-  font-size: 1.20rem;
-  border-color: white;
-  border: 3px solid black;
-  width: 120px;
-  border-radius: 90%;
-  height: 80px;
-  cursor: pointer;
-  margin: 10px;
-
-}
-
-.proceed-button:hover{
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  color: white;
-  font-weight: bold;
-  background-color: black;
-  font-size: 1.20rem;
-  border-color: white;
-  border: 3px solid black;
-  width: 120px;
-  border-radius: 90%;
-  height: 80px;
-  cursor: pointer;
-}
-*/
-
 .proceed-button{
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
@@ -246,6 +214,61 @@ button.btn.btn-default {
   padding-left: 8px;
 
 }
+
+
+.forms-address {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  border: 3px solid black;
+  height: 35px;
+  width: 41vw;
+  margin-bottom: 20px;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.forms-login {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  border: 3px solid black;
+  height: 35px;
+  width: 20vw;
+  margin-bottom: 20px;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+
+.enter-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-and-enter {
+  display: flex;
+  flex-direction: column;
+}
+.account-details-row {
+  display: flex;
+  justify-content: center;
+}
+
+.label-login {
+  margin: 5px;
+}
+
 
 .standard-delivery-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
