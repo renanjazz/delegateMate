@@ -58,7 +58,7 @@ h2 {
   text-align: center;
 }
 
-h3{
+h3 {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 400;
@@ -67,7 +67,7 @@ h3{
   text-align: center;
 }
 
-h4{
+h4 {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 700;
@@ -152,7 +152,7 @@ button.btn.btn-default {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: bold;
-  background-color: #BFC5FF;
+  background-color: #bfc5ff;
   font-size: 1rem;
   border-color: white;
   border: 2px solid black;
@@ -177,8 +177,7 @@ button.btn.btn-default {
   cursor: pointer;
 }
 
-
-.request-received-buttons{
+.request-received-buttons {
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -201,7 +200,7 @@ button.btn.btn-default {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
   background-color: #ffffff;
   border: 2px solid black;
   height: 30px;
@@ -209,9 +208,7 @@ button.btn.btn-default {
   margin-bottom: 20px;
   border-radius: 10px;
   padding-left: 8px;
-
 }
-
 
 .forms-address {
   font-family: "neue-haas-grotesk-text", sans-serif;
@@ -241,7 +238,6 @@ button.btn.btn-default {
   border-radius: 10px;
 }
 
-
 .enter-button-container {
   display: flex;
   justify-content: center;
@@ -266,12 +262,11 @@ button.btn.btn-default {
   margin: 5px;
 }
 
-
 .standard-delivery-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   height: 40px;
@@ -286,7 +281,7 @@ button.btn.btn-default {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
   background-color: white;
   height: 40px;
   width: 40.6vw;
@@ -294,14 +289,13 @@ button.btn.btn-default {
   overflow: hidden;
   border-radius: 10px;
   padding-left: 8px;
-
 }
 
 .expedited-delivery-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(255, 255, 255);
   height: 40px;
@@ -310,14 +304,13 @@ button.btn.btn-default {
   overflow: hidden;
   border-radius: 10px;
   padding-left: 8px;
-
 }
 
 .expedited-delivery-button.selected {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
   background-color: white;
   height: 40px;
   width: 40.6vw;
@@ -325,23 +318,22 @@ button.btn.btn-default {
   overflow: hidden;
   border-radius: 10px;
   padding-left: 8px;
-
 }
 
-.back-next-container{
+.back-next-container {
   display: flex;
   align-content: center;
   justify-content: center;
   margin-top: 10px;
 }
 
-.open-request-page-container{
+.open-request-page-container {
   display: flex;
   align-content: center;
   justify-content: center;
 }
 
-.request-card-container{
+.request-card-container {
   display: flex;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -350,7 +342,7 @@ button.btn.btn-default {
   box-shadow: 2px 2px 2px black;
 }
 
-.card-details{
+.card-details {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -359,11 +351,11 @@ button.btn.btn-default {
   margin-left: 15px;
 }
 
-.update-cancel-button-container{
+.update-cancel-button-container {
   display: flex;
 }
 
-.update-delivery-button{
+.update-delivery-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 400;
@@ -378,7 +370,7 @@ button.btn.btn-default {
   margin-right: 10px;
 }
 
-.cancel-request-button{
+.cancel-request-button {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-weight: 400;
@@ -392,26 +384,117 @@ button.btn.btn-default {
   margin-bottom: 10px;
 }
 
-.your-mate{
+.your-mate {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
   margin-top: 20px;
 }
 
-.mate-name{
+.mate-name {
   margin-top: -15px;
 }
 
-.update-page-container{
+.update-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.update-page-button-container{
+.update-page-button-container {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin: 20px
+  margin: 20px;
+}
+
+.company-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+button.btn.btn-default {
+  background: #e0e0e0;
+  box-shadow: none;
+}
+
+.proceed-button {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: black;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.company-description {
+  color: #555;
+}
+
+.company-card:hover {
+  transform: scale(1.05);
+}
+
+.companies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #bfc5ff;
+  font-size: 1.2rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: 90%;
+  height: 80px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.proceed-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.company-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.proceed-button:hover {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  color: white;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.company-description {
+  color: #555;
+}
+
+.company-card:hover {
+  transform: scale(1.05);
+}
+
+.companies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: black;
+  font-size: 1.2rem;
+  border-color: white;
+  border: 3px solid black;
+  width: 120px;
+  border-radius: 90%;
+  height: 80px;
+  cursor: pointer;
 }
