@@ -382,3 +382,16 @@ button.btn.btn-default {
 .mate-name{
   margin-top: -15px;
 }
+
+.update-page-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-page-button-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin: 20px
+}

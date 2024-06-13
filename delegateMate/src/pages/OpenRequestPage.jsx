@@ -16,6 +16,7 @@ function OpenRequestPage({ userData, currentUser }) {
         <p></p>
       )}
     </div>
+    
   );
 }
 

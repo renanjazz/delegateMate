@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Terms from "./pages/Terms";
 import CreateRequestPage from "./pages/CreateRequestPage";
 import { useState } from "react";
+import UpdatePage from "./pages/UpdatePage";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<LoginPage setCurrentUser={setCurrentUser} />} />
         <Route path="/request-received" element={<RequestReceivedPage currentUser={currentUser}/>} />
         <Route path="/open-requests" element={<OpenRequestPage currentUser={currentUser}/>} />
+        <Route path="/update-delivery" element={<UpdatePage currentUser={currentUser}/>} />
         <Route path="/about" element={<About />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
