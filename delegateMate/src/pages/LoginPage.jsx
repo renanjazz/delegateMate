@@ -216,10 +216,9 @@ const LoginPage = ({ setCurrentUser }) => {
             </label>
           </div>
           <div>
-            <Link to="/open-request">
+            <Link to="/companies">
               <button className="proceed-button">Back</button>
             </Link>
-
             <button className="proceed-button">Submit</button>
           </div>
         </form>

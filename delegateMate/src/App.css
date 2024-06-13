@@ -282,12 +282,12 @@ button.btn.btn-default {
   padding-left: 8px;
 }
 
-.standard-delivery-button.selected {
+.standard-delivery-button:hover {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
   text-align:left;
-  background-color: white;
+  background-color: rgb(218, 156, 254);
   height: 40px;
   width: 40.6vw;
   margin-bottom: 10px;
@@ -313,12 +313,12 @@ button.btn.btn-default {
 
 }
 
-.expedited-delivery-button.selected {
+.expedited-delivery-button:hover {
   font-family: "neue-haas-grotesk-text", sans-serif;
   color: black;
   font-size: 1rem;
   text-align:left;
-  background-color: white;
+  background-color: rgb(218, 156, 254);
   height: 40px;
   width: 40.6vw;
   margin-bottom: 10px;
