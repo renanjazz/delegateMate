@@ -101,7 +101,7 @@ const LoginPage = ({ setCurrentUser }) => {
           <p style={{ color: "red" }}>Invalid credentials, please try again</p>
         )}
         <div className="enter-button-container">
-          <button onClick={handleLogin} className="enter-button">
+          <button onClick={handleLogin} className="proceed-button">
             Enter
           </button>
         </div>
@@ -217,10 +217,10 @@ const LoginPage = ({ setCurrentUser }) => {
           </div>
           <div>
             <Link to="/open-request">
-              <button className="back-button">Back</button>
+              <button className="proceed-button">Back</button>
             </Link>
 
-            <button className="submit-button">Submit</button>
+            <button className="proceed-button">Submit</button>
           </div>
         </form>
       </div>

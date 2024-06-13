@@ -295,16 +295,3 @@ button.btn.btn-default {
   border-color: white;
   text-align: center;
 }
-
-.back-button {
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  margin-top: 20px;
-  padding: 10px 30px;
-  color: rgb(0, 0, 0);
-  background-color: #afafaf;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.3s;
-}
