@@ -8,10 +8,7 @@ const CompanyPage = () => {
   const service = queryParams.get("service");
   const city = queryParams.get("city");
 
-
-
-
-  // I think this state stores the list of companies and the selected one
+ 
   const [companies, setCompanies] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState(null);
   const navigate = useNavigate();
@@ -28,18 +25,17 @@ const CompanyPage = () => {
     }
   }, [service, city]);
 
+
   const handleSelectCompany = (company) => {
     setSelectedCompany(company);
   };
 
+  // Function to handle proceeding to the login page
   const handleProceed = () => {
     if (selectedCompany) {
-
-
-      //I think this stores the selected company in localStorage and navigate to the next page
-
+      
       localStorage.setItem('selectedCompany', JSON.stringify(selectedCompany));
-      navigate("/next-page", { state: { selectedCompany } });
+      navigate("/login", { state: { selectedCompany } });
     } else {
       alert("Please select a company to proceed.");
     }
